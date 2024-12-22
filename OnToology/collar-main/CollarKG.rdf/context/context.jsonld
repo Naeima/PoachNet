@@ -1,0 +1,525 @@
+{
+  "@context" : {
+    "hasSpeed" : {
+      "@id" : "https://w3id.org/def/foo#hasSpeed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/elements/1.1/abstract"
+    },
+    "Order" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Order"
+    },
+    "term_status" : {
+      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "genus" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#genus",
+      "@type" : "@id"
+    },
+    "PDOP" : {
+      "@id" : "https://w3id.org/def/foo#PDOP",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
+    "Direction" : {
+      "@id" : "https://w3id.org/def/foo#Direction"
+    },
+    "hasModel" : {
+      "@id" : "https://w3id.org/def/foo#hasModel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MarineHabitat" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#MarineHabitat"
+    },
+    "hasTree_height_m" : {
+      "@id" : "https://w3id.org/def/foo#hasTree_height_m",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Platform" : {
+      "@id" : "http://www.w3.org/ns/sosa/Platform"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "ProvenanceStatement" : {
+      "@id" : "http://purl.org/dc/terms/ProvenanceStatement"
+    },
+    "species" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#species",
+      "@type" : "@id"
+    },
+    "hasClay" : {
+      "@id" : "https://w3id.org/def/foo#hasClay",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "hasSite_plot_code" : {
+      "@id" : "https://w3id.org/def/foo#hasSite_plot_code",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "LocalTime" : {
+      "@id" : "https://w3id.org/def/foo#LocalTime"
+    },
+    "Kingdom" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom"
+    },
+    "citation" : {
+      "@id" : "http://schema.org/citation"
+    },
+    "Animalia" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Kingdom/Animalia"
+    },
+    "Habitat" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Habitat"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hosts" : {
+      "@id" : "http://www.w3.org/ns/sosa/hosts",
+      "@type" : "@id"
+    },
+    "hasName" : {
+      "@id" : "https://w3id.org/def/foo#hasName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTotal_N" : {
+      "@id" : "https://w3id.org/def/foo#hasTotal_N",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Altitude" : {
+      "@id" : "http://w3.org/2003/01/geo/wgs84_pos#Altitude"
+    },
+    "TaxonName" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+    },
+    "hasHorizon" : {
+      "@id" : "https://w3id.org/def/foo#hasHorizon",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Class" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Class"
+    },
+    "Elephantidae" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Elephantidae"
+    },
+    "hasValue" : {
+      "@id" : "https://w3id.org/def/foo#hasValue",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Speed" : {
+      "@id" : "https://w3id.org/def/foo#Speed"
+    },
+    "livesIn" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#livesIn",
+      "@type" : "@id"
+    },
+    "class" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#class",
+      "@type" : "@id"
+    },
+    "hasSite_name" : {
+      "@id" : "https://w3id.org/def/foo#hasSite_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "domainIncludes" : {
+      "@id" : "http://schema.org/domainIncludes"
+    },
+    "madeBySensor" : {
+      "@id" : "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type" : "@id"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "@type" : "@id"
+    },
+    "hasPlot_Name" : {
+      "@id" : "https://w3id.org/def/foo#hasPlot_Name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasInorganic_P" : {
+      "@id" : "https://w3id.org/def/foo#hasInorganic_P",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Prohibition" : {
+      "@id" : "http://web.resource.org/cc/Prohibition"
+    },
+    "Chordata" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum/Chordata"
+    },
+    "hasSand" : {
+      "@id" : "https://w3id.org/def/foo#hasSand",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Count" : {
+      "@id" : "https://w3id.org/def/foo#Count"
+    },
+    "hasSoil_pH" : {
+      "@id" : "https://w3id.org/def/foo#hasSoil_pH",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Civettictis" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Civettictis"
+    },
+    "hasPath" : {
+      "@id" : "https://w3id.org/def/foo#hasPath",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "hasYears_since_frag" : {
+      "@id" : "https://w3id.org/def/foo#hasYears_since_frag",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasLand_Use" : {
+      "@id" : "https://w3id.org/def/foo#hasLand_Use",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Viverridae" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Family/Viverridae"
+    },
+    "Temperature" : {
+      "@id" : "https://w3id.org/def/foo#Temperature"
+    },
+    "hasTree_ID" : {
+      "@id" : "https://w3id.org/def/foo#hasTree_ID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "based_near" : {
+      "@id" : "http://xmlns.com/foaf/0.1/based_near",
+      "@type" : "@id"
+    },
+    "Mammalia" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Mammalia"
+    },
+    "hasFirst_planning_nearest_OP" : {
+      "@id" : "https://w3id.org/def/foo#hasFirst_planning_nearest_OP",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "resultTime" : {
+      "@id" : "http://www.w3.org/ns/sosa/resultTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasHDOP" : {
+      "@id" : "https://w3id.org/def/foo#hasHDOP",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "LocalDate" : {
+      "@id" : "https://w3id.org/def/foo#LocalDate"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "hasSubplot_radius_m" : {
+      "@id" : "https://w3id.org/def/foo#hasSubplot_radius_m",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "GMTDate" : {
+      "@id" : "https://w3id.org/def/foo#GMTDate"
+    },
+    "rangeIncludes" : {
+      "@id" : "http://schema.org/rangeIncludes"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
+    },
+    "GMTTime" : {
+      "@id" : "https://w3id.org/def/foo#GMTTime"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "Family" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Family"
+    },
+    "Work" : {
+      "@id" : "http://web.resource.org/cc/Work"
+    },
+    "PhysicalResource" : {
+      "@id" : "http://purl.org/dc/terms/PhysicalResource"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+      "@type" : "@id"
+    },
+    "hasTotal_P" : {
+      "@id" : "https://w3id.org/def/foo#hasTotal_P",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Phylum" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Phylum"
+    },
+    "prefixIRI" : {
+      "@id" : "http://data.bioontology.org/metadata/prefixIRI"
+    },
+    "Distance" : {
+      "@id" : "https://w3id.org/def/foo#Distance"
+    },
+    "Loxodonta" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonName/Loxodonta"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Carnivora" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Carnivora"
+    },
+    "phylum" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#phylum",
+      "@type" : "@id"
+    },
+    "Cov" : {
+      "@id" : "https://w3id.org/def/foo#Cov"
+    },
+    "hasLiana_dbh_cm" : {
+      "@id" : "https://w3id.org/def/foo#hasLiana_dbh_cm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "habitat" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#habitat",
+      "@type" : "@id"
+    },
+    "P" : {
+      "@id" : "https://w3id.org/def/foo#C:P",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Point" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "hasSample" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasSample",
+      "@type" : "@id"
+    },
+    "observes" : {
+      "@id" : "http://www.w3.org/ns/sosa/observes",
+      "@type" : "@id"
+    },
+    "hasMake" : {
+      "@id" : "https://w3id.org/def/foo#hasMake",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDistance" : {
+      "@id" : "https://w3id.org/def/foo#hasDistance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "hasSubplot" : {
+      "@id" : "https://w3id.org/def/foo#hasSubplot",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "hasResult" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasResult",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "order" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#order",
+      "@type" : "@id"
+    },
+    "Genus" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Genus"
+    },
+    "Reptilia" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Class/Reptilia"
+    },
+    "hasDirection" : {
+      "@id" : "https://w3id.org/def/foo#hasDirection",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "family" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#family",
+      "@type" : "@id"
+    },
+    "isObservedBy" : {
+      "@id" : "http://www.w3.org/ns/sosa/isObservedBy",
+      "@type" : "@id"
+    },
+    "Proboscidea" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Proboscidea"
+    },
+    "hasFeatureOfInterest" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type" : "@id"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "@type" : "@id"
+    },
+    "LicenseDocument" : {
+      "@id" : "http://purl.org/dc/terms/LicenseDocument"
+    },
+    "hasTree_individual_no" : {
+      "@id" : "https://w3id.org/def/foo#hasTree_individual_no",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasLocalDate" : {
+      "@id" : "https://w3id.org/def/foo#hasLocalDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Frequency" : {
+      "@id" : "http://purl.org/dc/terms/Frequency"
+    },
+    "observedProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+      "@type" : "@id"
+    },
+    "hasReplanting_nearest_OP" : {
+      "@id" : "https://w3id.org/def/foo#hasReplanting_nearest_OP",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "madeObservation" : {
+      "@id" : "http://www.w3.org/ns/sosa/madeObservation",
+      "@type" : "@id"
+    },
+    "hasCount" : {
+      "@id" : "https://w3id.org/def/foo#hasCount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "N" : {
+      "@id" : "https://w3id.org/def/foo#hasC:N",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "date" : {
+      "@id" : "http://www.w3.org/2001/XMLSchema-datatypes#date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "HDOP" : {
+      "@id" : "https://w3id.org/def/foo#HDOP"
+    },
+    "kingdom" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#kingdom",
+      "@type" : "@id"
+    },
+    "hasTotal_C" : {
+      "@id" : "https://w3id.org/def/foo#hasTotal_C",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Policy" : {
+      "@id" : "http://purl.org/dc/terms/Policy"
+    },
+    "hasDisturbance" : {
+      "@id" : "https://w3id.org/def/foo#hasDisturbance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTree_dbh_cm" : {
+      "@id" : "https://w3id.org/def/foo#hasTree_dbh_cm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "hasTemp" : {
+      "@id" : "https://w3id.org/def/foo#hasTemp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "hasSilt" : {
+      "@id" : "https://w3id.org/def/foo#hasSilt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "TerrestrialHabitat" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#TerrestrialHabitat"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Image" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Image"
+    },
+    "License" : {
+      "@id" : "http://web.resource.org/cc/License"
+    },
+    "ObservableProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+    },
+    "hasTree_notes" : {
+      "@id" : "https://w3id.org/def/foo#hasTree_notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasMoisture" : {
+      "@id" : "https://w3id.org/def/foo#hasMoisture",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Species" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Species"
+    },
+    "hasTemperature" : {
+      "@id" : "https://w3id.org/def/foo#hasTemperature",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "hasCov" : {
+      "@id" : "https://w3id.org/def/foo#hasCov",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Requirement" : {
+      "@id" : "http://web.resource.org/cc/Requirement"
+    },
+    "Squamata" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#Order/Squamata"
+    },
+    "TaxonRank" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#TaxonRank"
+    },
+    "relativeLocation" : {
+      "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "FreshwaterHabitat" : {
+      "@id" : "https://www.bbc.co.uk/ontologies/wildlife-ontology#FreshwaterHabitat"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "Source_of_dates" : {
+      "@id" : "https://w3id.org/def/foo#Source_of_dates",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "relation" : {
+      "@id" : "http://purl.org/dc/terms/relation"
+    },
+    "hasElevation_masi" : {
+      "@id" : "https://w3id.org/def/foo#hasElevation_masi",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Observation" : {
+      "@id" : "https://w3.org/ns/sosa/Observation"
+    },
+    "Sensor" : {
+      "@id" : "http://www.w3.org/ns/sosa/Sensor"
+    },
+    "hasSimpleResult" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "isFeatureOfInterestOf" : {
+      "@id" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@type" : "@id"
+    }
+  }
+}
